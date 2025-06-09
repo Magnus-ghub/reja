@@ -6,12 +6,18 @@ const connectionString = "mongodb+srv://magnus:zhvK8MSqc5mukvlL@cluster0.h2xiuv9
 
 mongodb.connect(connectionString, {
     useNewUrlParser: true,
-    useUnifieldTopology: true,
+    useUnifiedTopology: true,
 }, (err, client) => {
     if(err) console.log("ERROR on connection to MongoDB");
     else {
         console.log("MongoDB connection succeed");
-        module.exports = client;
+
+        module.exports = client;  // qaytar
+        // db = client.db();      //chatgpt
+        // module.exports = db;   //chatgpt
+
+
+
 
         const app = require("./app");
         const server = http.createServer(app);
