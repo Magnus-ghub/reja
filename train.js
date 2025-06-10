@@ -1,3 +1,15 @@
+// B - TASK
+function countDigits(str) {
+     const matches = str.match(/\d/g);
+     return matches ? matches.length : 0;
+   }
+
+   const myString = "dmw284gsbd69idm3def2";
+   const result = countDigits(myString);
+   console.log("raqamlar soni:", result); 
+
+
+
 
 // ASYNC FUNCTION
 
