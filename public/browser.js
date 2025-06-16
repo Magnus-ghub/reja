@@ -61,12 +61,14 @@ document.addEventListener("click", function (e) {
         e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
     );
     if (userInput) {
+       console.log("FromtEnd => BackEndga Rest API jo'natadi");
        axios
        .post("/edit-item", {
         id: e.target.getAttribute("data-id"),
         new_input: userInput,
      }) 
      .then(response => {
+        
         console.log(response.data);
         e.target.parentElement.parentElement.querySelector(
             ".item-text"

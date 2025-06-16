@@ -55,12 +55,16 @@ app.post("/delete-item", (req,res) => {
 
 
 app.post("/edit-item", (req, res) => {
+    console.log("STEP 2: FRONTEND => BACKENDga kirib keladi");
     const data = req.body;
     console.log(data);
+    console.log("STEP 3: BACKEND => DATABACEga kirib keladi");
     db.collection("plans").findOneAndUpdate(
         {_id: new mongodb.ObjectId(data.id)},
          {$set: {reja: data.new_input}}, 
          function(err, data) {
+            console.log("STEP 4:DB => BACKENDga qaytib keladi");
+            console.log("STEP 5:BACKEND FRONTENDga res jonatadi");
             res.json({state: "success"});
     }
   );
