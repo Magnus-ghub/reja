@@ -1,11 +1,22 @@
-// D - TASK
-function checkContent(a, b) {
-    return a.split("").sort().join("") === b.split("").sort().join("")
+// // E - TASK
+
+function getReverse(a) {
+    return a.split("").reverse("").join("")
 }
 
-console.log(checkContent('maktab', 'takbam'));
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log(checkContent("mitroup", "gmtiprou"));
+console.log(getReverse("hello"));
+console.log(getReverse("devex"));
+console.log(getReverse("mongodb"));
+
+
+// // D - TASK
+// function checkContent(a, b) {
+//     return a.split("").sort().join("") === b.split("").sort().join("")
+// }
+
+// console.log(checkContent('maktab', 'takbam'));
+// console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log(checkContent("mitroup", "gmtiprou"));
 
 
 // // C - TASK
